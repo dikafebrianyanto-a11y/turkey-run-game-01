@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gobble Dash — The Great Turkey Escape</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%; overflow: hidden;
+    background: #2b1608;
+    font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+  }
+  #wrap {
+    position: fixed; inset: 0; display: flex;
+    align-items: center; justify-content: center;
+  }
+  canvas {
+    display: block; background: #ff9a3c;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+    image-rendering: auto;
+  }
+  #hint {
+    position: fixed; left: 50%; bottom: 10px; transform: translateX(-50%);
+    color: #ffd9a0; font-size: 12px; letter-spacing: 0.08em;
+    opacity: 0.75; user-select: none; pointer-events: none; white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game" width="1280" height="720"></canvas></div>
+<div id="hint">SPACE / CLICK jump &nbsp;·&nbsp; DOWN slide &nbsp;·&nbsp; P pause &nbsp;·&nbsp; M mute &nbsp;·&nbsp; R restart</div>
+<script src="src/config.js"></script>
+<script src="src/random.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/world.js"></script>
+<script src="src/render.js"></script>
+<script src="src/input.js"></script>
+<script src="src/shots.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
